@@ -62,7 +62,7 @@
             this.SideA = a;
             this.SideB = b;
             this.SideC = c;
-            if (a + b < c || b + c < a || c + a < b)
+            if (a + b > c && b + c > a && c + a > b)
             {
                 throw new InvalidFigureException(nameof(Triangle));
             }
@@ -76,7 +76,7 @@
         public double GetSquare()
         {   
             var p = (this._sideA + this._sideB + this._sideC) / 2;
-            return Math.Sqrt(p * (p - this._sideA) * (p - this._sideB) * (p - this._sideC)); ;
+            return Math.Sqrt(p * (p - this._sideA) * (p - this._sideB) * (p - this._sideC));
         }
     }
 }

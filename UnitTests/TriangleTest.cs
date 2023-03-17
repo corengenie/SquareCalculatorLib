@@ -9,29 +9,29 @@ namespace UnitTests
         [Test]
         public void CreateNegativeSideTest()
         {
-            Assert.Catch<ArgumentOutOfRangeException>(() => _ = new Triangle(-1, 1, 1));
-            Assert.Catch<ArgumentOutOfRangeException>(() => _ = new Triangle(1, -1, 1));
-            Assert.Catch<ArgumentOutOfRangeException>(() => _ = new Triangle(1, 1, -1));
+            Assert.Catch<ArgumentOutOfRangeException>(() => new Triangle(-1, 1, 1));
+            Assert.Catch<ArgumentOutOfRangeException>(() => new Triangle(1, -1, 1));
+            Assert.Catch<ArgumentOutOfRangeException>(() => new Triangle(1, 1, -1));
         }
 
         [Test]
         public void CreateZeroSideTest()
         {
-            Assert.Catch<ArgumentOutOfRangeException>(() => _ = new Triangle(0, 1, 1));
-            Assert.Catch<ArgumentOutOfRangeException>(() => _ = new Triangle(1, 0, 1));
-            Assert.Catch<ArgumentOutOfRangeException>(() => _ = new Triangle(1, 1, 0));
+            Assert.Catch<ArgumentOutOfRangeException>(() => new Triangle(0, 1, 1));
+            Assert.Catch<ArgumentOutOfRangeException>(() => new Triangle(1, 0, 1));
+            Assert.Catch<ArgumentOutOfRangeException>(() => new Triangle(1, 1, 0));
         }
 
         [Test]
         public void CreateInValidTest()
         {
-            Assert.Catch<InvalidFigureException>(() => _ = new Triangle(10, 1, 1));
+            Assert.Catch<InvalidFigureException>(() => new Triangle(10, 1, 1));
         }
 
         [Test]
         public void CreateValidTest()
         {
-            Assert.DoesNotThrow(() => _ = new Triangle(3, 4, 5));
+            Assert.DoesNotThrow(() => new Triangle(3, 4, 5));
         }
 
         [Test]
